@@ -1,0 +1,55 @@
+{
+  "name": "egg-mosca",
+  "version": "1.0.0",
+  "description": "mosca plugin for egg",
+  "eggPlugin": {
+    "name": "mosca"
+  },
+  "keywords": [
+    "egg",
+    "eggPlugin",
+    "egg-plugin",
+    "mosca",
+    "mqtt"
+  ],
+  "dependencies": {
+    "mosca": "^2.8.3",
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "egg": "latest-1",
+    "egg-bin": "^4.7.0",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.17.1",
+    "eslint": "^4.19.1",
+    "eslint-config-egg": "^7.0.0",
+    "supertest": "^3.1.0",
+    "utility": "^1.13.1"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "ci": {
+    "version": "6, 8",
+    "license": true,
+    "services": "mosca"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eggjs/egg-mosca.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eggjs/egg/issues"
+  },
+  "homepage": "https://github.com/eggjs/egg-mosca#readme",
+  "author": "oulp",
+  "license": "MIT"
+}
